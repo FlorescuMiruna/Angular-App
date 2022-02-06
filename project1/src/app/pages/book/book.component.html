@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div>
+            <h5 class="text-danger ">This is your Book List</h5>
+            <div class="card p-3 shadow ">
+                <div class="card-body ">
+                    <table class="table table-hover ">
+                        <thead>
+                            <tr>
+                                <th scope="col ">Title</th>
+                                <th scope="col ">Author</th>
+                                <th scope="col ">Genre</th>
+                                <th scope="col "></th>
+                                <th scope="col "></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let book of booksList ">
+                                <td>{{book.title}}</td>
+                                <td>{{book.author}}</td>
+                                <td>{{book.genre}}</td>
+
+
+                                <td>
+                                    <button class="btn btn-danger" (click)="deleteBook(book) ">Delete</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" (click)="goToBookEditForm(book)">Edit</button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button id="bt" type="button " class="btn btn-success " (click)="goToBookForm() ">Add a new book</button>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="goHome()" id="btn" type="button" class="btn btn-dark">Go home</button></div>
+
+</div>

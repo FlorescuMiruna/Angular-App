@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div>
+            <h5 class="text-danger "> This is your movie list</h5>
+            <div class="card p-3 shadow ">
+                <div class="card-body ">
+                    <table class="table table-hover ">
+                        <thead>
+                            <tr>
+                                <th scope="col ">Name</th>
+                                <th scope="col ">Director</th>
+                                <th scope="col ">Rating</th>
+                                <th scope="col "> </th>
+                                <th scope="col "> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let movie of moviesList ">
+                                <td>{{movie.name}}</td>
+                                <td>{{movie.director}}</td>
+                                <td>{{movie.rating}}</td>
+
+                                <td>
+                                    <button class="btn btn-danger " (click)="deleteMovie(movie) ">Delete</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary" (click)="goToMovieEditForm(movie)">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button id="bt" type="button " class="btn btn-success " (click)="goToMovieForm()">Add a new movie</button>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="goHome()" id="btn" type="button" class="btn btn-dark">Go home</button></div>
+
+</div>

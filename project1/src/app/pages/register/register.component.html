@@ -1,0 +1,81 @@
+<!-- <p>register works!</p>
+
+
+<form [formGroup]="myForm" (ngSubmit)="doRegister()">
+
+
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" placeholder="Email " formControlName="email">
+    </div>
+
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" placeholder="First Name... " formControlName="firstName" />
+    </div>
+
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" placeholder="Last Name... " formControlName="lastName">
+    </div>
+
+
+
+
+    <div class="form-group">
+        <label>Password</label>
+        <input class="form-control " placeholder="Password " formControlName="password" type="password">
+    </div>
+    <button [disabled]="!myForm.valid" class="btn btn-success" type="submit">Register</button>
+</form>
+
+<a (click)="goToLogin() ">Login</a> -->
+
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <h4 id="re" class="text-dark text-muted">Register</h4>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">First Name</label>
+                            <input type="text" class="form-control" name="firstName" [(ngModel)]="firstName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" [(ngModel)]="lastName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                        </div>
+
+                        <button type="button" class="btn btn-info" (click)="register()">Register</button>
+                        <div id="q">
+                            <p>Already have an account?</p>
+                        </div>
+                        <div id="goto">
+                            <a href="/login">Login</a>
+                        </div>
+
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <h6>Already have an account?</h6>
+                                <button type="button" class="btn btn-info" (click)="goToLogin()">Login</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

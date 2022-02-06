@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div>
+            <div class="card border-0 shadow p-3">
+                <div class="form-floating mb-3 tetx-center">
+                    <h5 class="text-center text-warning">~ Add a book ~</h5>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title">
+                    <label for="title ">Title</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="author" name="author" [(ngModel)]="author">
+                    <label for="author ">Author</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="genre" name="genre" [(ngModel)]="genre">
+                    <label for="genre ">Genre</label>
+                </div>
+
+
+                <button type="button " class="btn btn-success" (click)="addBook() ">Add book</button>
+            </div>
+        </div>
+        <!-- <div class="col-md-8 mt-2 ">
+            <h5 class="text-danger "> Book List</h5>
+            <div class="card p-3 shadow ">
+                <div class="card-body ">
+                    <table class="table table-hover ">
+                        <thead>
+                            <tr>
+                                <th scope="col ">Title</th>
+                                <th scope="col ">Author</th>
+                                <th scope="col ">Genre</th>
+                                <th scope="col ">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let book of booksList ">
+                                <td>{{book.title}}</td>
+                                <td>{{book.author}}</td>
+                                <td>{{book.genre}}</td>
+
+                                <td>
+                                    <button class="btn btn-outline-danger " (click)="deleteBook(book) ">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+</div>
